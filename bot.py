@@ -134,8 +134,7 @@ class ModerationBot(discord.Client):
 
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-if __name__ == "__main__":
-    # Read the token from a file and strip newlines (Fixes issues when running the bot on linux)
+if __name__ == "__main__":    # Read the token from a file and strip newlines (Fixes issues when running the bot on linux)
     try:
         token = open(os.path.join(__location__, "token.txt"), "r").read().strip("\n")
     except FileNotFoundError:
@@ -147,4 +146,4 @@ if __name__ == "__main__":
     intents.message_content = True
     # Run the bot instance
     bot = ModerationBot(intents)
-    bot.run(token)
+    bot.run("MTAzOTU0MzY1OTg1NjY3NDg4OA.GR_hTP.0SM4OJ3-9BnY9osNn5Y62WU4ilnwpOMNH6qG4c")
